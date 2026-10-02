@@ -1,10 +1,10 @@
-:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#24251f;background:#f6f2e8}*{box-sizing:border-box}body{margin:0}.app{max-width:620px;margin:auto;padding:36px 18px 40px;text-align:center}header{padding:14px 8px 24px}.bear{display:flex;justify-content:center;align-items:center;line-height:1}.bear img{display:block;width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;min-width:0;min-height:0;aspect-ratio:1/1;object-fit:cover;border-radius:28px;filter:drop-shadow(0 5px 10px #0002)}h1{font-size:32px;margin:10px 0 8px}header p{color:#626358;margin:0;line-height:1.7}.search{width:100%;border:0;border-radius:22px;padding:22px;font-size:22px;font-weight:800;background:#283c2d;color:white;box-shadow:0 8px 22px #0002}.search:active{transform:scale(.99)}.search:disabled{opacity:.65}.privacy,.status,footer{font-size:13px;color:#77786d}.status{margin:22px 0;background:#fffaf0;border-radius:14px;padding:12px}.hidden{display:none}.results{text-align:left}.results h2{font-size:17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid article,.nearest{background:white;border-radius:16px;padding:14px 8px;text-align:center;box-shadow:0 2px 10px #0000000c}.grid span,.nearest span{display:block;font-size:12px;color:#666}.grid strong{display:block;font-size:25px;margin-top:5px}.nearest{margin-top:10px;padding:18px}.nearest strong{display:block;font-size:20px;margin:8px}.nearest small{display:block;color:#666}.notice{font-size:12px;color:#777;line-height:1.6;margin:14px 5px}footer{margin-top:28px}.mode{font-weight:700;letter-spacing:.08em}
+:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#24251f;background:#f6f2e8}*{box-sizing:border-box}body{margin:0}.app{max-width:620px;margin:auto;padding:36px 18px 40px;text-align:center}header{padding:14px 8px 24px}.bear{display:flex;justify-content:center;align-items:center;line-height:1}.bear img{display:block;width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;min-width:0;min-height:0;aspect-ratio:1/1;object-fit:contain;filter:drop-shadow(0 5px 10px #0002)}h1{font-size:32px;margin:10px 0 8px}header p{color:#626358;margin:0;line-height:1.7}.search{width:100%;border:0;border-radius:22px;padding:22px;font-size:22px;font-weight:800;background:#283c2d;color:white;box-shadow:0 8px 22px #0002}.search:active{transform:scale(.99)}.search:disabled{opacity:.65}.privacy,.status,footer{font-size:13px;color:#77786d}.status{margin:22px 0;background:#fffaf0;border-radius:14px;padding:12px}.hidden{display:none}.results{text-align:left}.results h2{font-size:17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid article,.nearest{background:white;border-radius:16px;padding:14px 8px;text-align:center;box-shadow:0 2px 10px #0000000c}.grid span,.nearest span{display:block;font-size:12px;color:#666}.grid strong{display:block;font-size:25px;margin-top:5px}.nearest{margin-top:10px;padding:18px}.nearest strong{display:block;font-size:20px;margin:8px}.nearest small{display:block;color:#666}.notice{font-size:12px;color:#777;line-height:1.6;margin:14px 5px}footer{margin-top:28px}.mode{font-weight:700;letter-spacing:.08em}
 @media(max-width:600px){.app{padding-top:20px}header{padding:4px 8px 16px}.bear img{width:96px!important;height:96px!important;max-width:96px!important;max-height:96px!important;border-radius:24px}h1{font-size:29px;margin:6px 0}header p{font-size:14px;line-height:1.55}.search{padding:19px}.privacy{margin:10px 0}.status{margin:12px 0}.results h2{margin:16px 0 10px}.nearest{padding:15px}.notice{margin-bottom:6px}}
 
 /* Ditekuma mascot: hard size constraints for mobile/PWA */
-.bear{width:112px;height:112px;margin:0 auto;overflow:hidden;border-radius:28px;flex:none}
-.bear img{width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;min-width:0!important;min-height:0!important;object-fit:cover;object-position:center;flex:none}
-@media(max-width:600px){.bear{width:96px;height:96px;border-radius:24px}.bear img{width:96px!important;height:96px!important;max-width:96px!important;max-height:96px!important}}
+.bear{width:112px;height:112px;margin:0 auto;overflow:visible;flex:none}
+.bear img{width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;min-width:0!important;min-height:0!important;object-fit:contain;object-position:center;flex:none}
+@media(max-width:600px){.bear{width:96px;height:96px}.bear img{width:96px!important;height:96px!important;max-width:96px!important;max-height:96px!important}}
 
 /* Japanese mobile line wrapping */
 .nowrap{white-space:nowrap}.nearest strong{line-break:strict;word-break:keep-all;overflow-wrap:normal}.notice{line-break:strict;word-break:normal}
@@ -14,12 +14,20 @@
 .mobile-break{display:none}@media(max-width:600px){.mobile-break{display:block}}
 
 /* Ditekuma reaction states: visual shell; dedicated mascot assets can replace the shared image later */
-.bear{position:relative;transition:transform .25s ease,filter .25s ease}.bear::after{position:absolute;right:-4px;top:-8px;font-weight:900;font-size:28px;line-height:1;filter:drop-shadow(0 2px 2px #fff)}
-body[data-reaction="notice"] .bear{transform:scale(1.02)}body[data-reaction="notice"] .bear::after{content:"?"}
-body[data-reaction="caution"] .bear{transform:scale(1.05)}body[data-reaction="caution"] .bear::after{content:"!!"}
-body[data-reaction="strong"] .bear{transform:scale(1.07);filter:contrast(1.05)}body[data-reaction="strong"] .bear::after{content:"!"}
+.bear{position:relative;transition:transform .25s ease,filter .25s ease}
+body[data-reaction="notice"] .bear{transform:scale(1.02)}
+body[data-reaction="caution"] .bear{transform:scale(1.05)}
+body[data-reaction="strong"] .bear{transform:scale(1.07);filter:contrast(1.05)}
 body[data-reaction="notice"] .status{border-left:4px solid #4f86a6}body[data-reaction="caution"] .status{border-left:4px solid #c99525}body[data-reaction="strong"] .status{border-left:4px solid #b94b42}
 @media(prefers-reduced-motion:reduce){.bear{transition:none}}
 
 /* Hidden developer reaction test panel */
 .reaction-test{margin:24px 0 0;padding:14px;background:#fffaf0;border:1px dashed #aaa;border-radius:16px;font-size:12px}.reaction-test strong{display:block;margin-bottom:10px}.reaction-test div{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.reaction-test button{border:1px solid #d4d0c4;background:white;border-radius:10px;padding:9px;font-weight:700;color:#34352f}.reaction-test button.active{outline:2px solid #283c2d}.reaction-test small{display:block;margin-top:9px;color:#777}
+
+/* Environment layers: season and local device time. Autumn is active in Oct/Nov. */
+header{position:relative;isolation:isolate;border-radius:28px;transition:background .35s ease}
+body[data-season="autumn"] header{background:radial-gradient(circle at 15% 15%,#e9b85b22 0 7%,transparent 8%),radial-gradient(circle at 85% 28%,#c9793b1f 0 6%,transparent 7%),linear-gradient(180deg,#fff8e800,rgba(205,139,62,.08))}
+body[data-season="autumn"] header::before,body[data-season="autumn"] header::after{content:"🍂";position:absolute;z-index:-1;opacity:.28;font-size:22px;pointer-events:none}
+body[data-season="autumn"] header::before{left:7%;top:18%}body[data-season="autumn"] header::after{right:7%;bottom:18%;transform:rotate(25deg)}
+body[data-time="evening"] header{box-shadow:inset 0 0 70px #d98b3820}body[data-time="night"] header{box-shadow:inset 0 0 80px #243b4b22}
+body[data-reaction="strong"] .bear{transform:scale(1.10)}
