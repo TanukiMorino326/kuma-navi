@@ -31,3 +31,19 @@ body[data-season="autumn"] header::before,body[data-season="autumn"] header::aft
 body[data-season="autumn"] header::before{left:7%;top:18%}body[data-season="autumn"] header::after{right:7%;bottom:18%;transform:rotate(25deg)}
 body[data-time="evening"] header{box-shadow:inset 0 0 70px #d98b3820}body[data-time="night"] header{box-shadow:inset 0 0 80px #243b4b22}
 body[data-reaction="strong"] .bear{transform:scale(1.10)}
+
+/* Okazawa seven-season atmosphere */
+body[data-season="spring"] header{background:radial-gradient(circle at 14% 18%,#f4b8c733 0 6%,transparent 7%),radial-gradient(circle at 86% 30%,#f7d1da30 0 6%,transparent 7%),linear-gradient(180deg,#fffaf500,#f6cbd018)}
+body[data-season="earlysummer"] header{background:radial-gradient(circle at 16% 18%,#a9d66f2b 0 7%,transparent 8%),radial-gradient(circle at 84% 26%,#d9ef9f28 0 6%,transparent 7%),linear-gradient(180deg,#fafff700,#9fcf7918)}
+body[data-season="summer"] header{background:radial-gradient(circle at 18% 15%,#ffd86b30 0 8%,transparent 9%),linear-gradient(180deg,#fff8d800,#4e9f611b)}
+body[data-season="earlywinter"] header{background:radial-gradient(circle at 16% 20%,#d5d9d62b 0 5%,transparent 6%),radial-gradient(circle at 85% 28%,#edf3f72e 0 5%,transparent 6%),linear-gradient(180deg,#fff0,#c4c7b51a)}
+body[data-season="winter"] header{background:radial-gradient(circle at 14% 18%,#fff 0 3%,transparent 4%),radial-gradient(circle at 83% 30%,#fff 0 3%,transparent 4%),radial-gradient(circle at 70% 12%,#fff 0 2%,transparent 3%),linear-gradient(180deg,#eef6fb66,#dbe8ef30)}
+body[data-season="latewinter"] header{background:radial-gradient(circle at 15% 20%,#fff 0 3%,transparent 4%),radial-gradient(circle at 84% 28%,#b7d98b2b 0 5%,transparent 6%),linear-gradient(180deg,#edf5f744,#d8e8cf22)}
+body[data-season="spring"] header::before,body[data-season="spring"] header::after{content:"🌸";position:absolute;z-index:-1;opacity:.24;font-size:20px}
+body[data-season="earlysummer"] header::before,body[data-season="earlysummer"] header::after{content:"🌿";position:absolute;z-index:-1;opacity:.22;font-size:20px}
+body[data-season="summer"] header::before,body[data-season="summer"] header::after{content:"☀";position:absolute;z-index:-1;opacity:.15;font-size:23px}
+body[data-season="earlywinter"] header::before,body[data-season="earlywinter"] header::after{content:"❄";position:absolute;z-index:-1;opacity:.20;font-size:18px}
+body[data-season="winter"] header::before,body[data-season="winter"] header::after{content:"❄";position:absolute;z-index:-1;opacity:.32;font-size:20px}
+body[data-season="latewinter"] header::before,body[data-season="latewinter"] header::after{content:"❄";position:absolute;z-index:-1;opacity:.18;font-size:18px}
+body[data-season] header::before{left:7%;top:18%}body[data-season] header::after{right:7%;bottom:18%;transform:rotate(22deg)}
+@media(prefers-reduced-motion:no-preference){body[data-season="autumn"] header::after,body[data-season="spring"] header::after,body[data-season="winter"] header::after{animation:seasonFloat 5s ease-in-out infinite alternate}@keyframes seasonFloat{to{transform:translateY(7px) rotate(30deg)}}}
