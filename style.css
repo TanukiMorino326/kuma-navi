@@ -15,7 +15,7 @@
 
 /* Ditekuma reaction states: visual shell; dedicated mascot assets can replace the shared image later */
 .bear{position:relative;transition:transform .25s ease,filter .25s ease}.bear::after{position:absolute;right:-4px;top:-8px;font-weight:900;font-size:28px;line-height:1;filter:drop-shadow(0 2px 2px #fff)}
-body[data-reaction="notice"] .bear{transform:rotate(-2deg) scale(1.03)}body[data-reaction="notice"] .bear::after{content:"?"}
+body[data-reaction="notice"] .bear{transform:scale(1.02)}body[data-reaction="notice"] .bear::after{content:"?"}
 body[data-reaction="caution"] .bear{transform:scale(1.05)}body[data-reaction="caution"] .bear::after{content:"!!"}
 body[data-reaction="strong"] .bear{transform:scale(1.07);filter:contrast(1.05)}body[data-reaction="strong"] .bear::after{content:"!"}
 body[data-reaction="notice"] .status{border-left:4px solid #4f86a6}body[data-reaction="caution"] .status{border-left:4px solid #c99525}body[data-reaction="strong"] .status{border-left:4px solid #b94b42}
