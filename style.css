@@ -20,3 +20,6 @@ body[data-reaction="caution"] .bear{transform:scale(1.05)}body[data-reaction="ca
 body[data-reaction="strong"] .bear{transform:scale(1.07);filter:contrast(1.05)}body[data-reaction="strong"] .bear::after{content:"!"}
 body[data-reaction="notice"] .status{border-left:4px solid #4f86a6}body[data-reaction="caution"] .status{border-left:4px solid #c99525}body[data-reaction="strong"] .status{border-left:4px solid #b94b42}
 @media(prefers-reduced-motion:reduce){.bear{transition:none}}
+
+/* Hidden developer reaction test panel */
+.reaction-test{margin:24px 0 0;padding:14px;background:#fffaf0;border:1px dashed #aaa;border-radius:16px;font-size:12px}.reaction-test strong{display:block;margin-bottom:10px}.reaction-test div{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.reaction-test button{border:1px solid #d4d0c4;background:white;border-radius:10px;padding:9px;font-weight:700;color:#34352f}.reaction-test button.active{outline:2px solid #283c2d}.reaction-test small{display:block;margin-top:9px;color:#777}
