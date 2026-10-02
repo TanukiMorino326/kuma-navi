@@ -1,1 +1,17 @@
-{"name":"クマナビ","short_name":"クマナビ","start_url":"./","display":"standalone","background_color":"#f6f2e8","theme_color":"#f6f2e8","lang":"ja","description":"現在地周辺のクマ公式掲載情報を確認するPWA"}
+{
+  "id": "./",
+  "name": "クマナビ",
+  "short_name": "クマナビ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f2e8",
+  "theme_color": "#f6f2e8",
+  "lang": "ja",
+  "description": "現在地周辺のクマ公式掲載情報を確認するPWA",
+  "categories": [
+    "utilities",
+    "navigation"
+  ]
+}
