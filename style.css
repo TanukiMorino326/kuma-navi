@@ -57,3 +57,5 @@ body[data-season="spring"][data-month="5"] header::before,body[data-season="spri
 body[data-season="spring"][data-month="5"] header{background:radial-gradient(circle at 14% 18%,#b8d98b2b 0 6%,transparent 7%),radial-gradient(circle at 86% 30%,#f4c9d51d 0 5%,transparent 6%),linear-gradient(180deg,#fffaf500,#cde6b51b)}
 body[data-season="earlysummer"] header{background:radial-gradient(circle at 16% 18%,#91c95c32 0 7%,transparent 8%),radial-gradient(circle at 84% 26%,#d9ef9f2e 0 6%,transparent 7%),linear-gradient(180deg,#fafff700,#8fc76c20)}
 body[data-season="earlywinter"] header{background:radial-gradient(circle at 16% 20%,#b9a77d20 0 6%,transparent 7%),radial-gradient(circle at 85% 28%,#edf3f72e 0 5%,transparent 6%),linear-gradient(180deg,#fff0,#bfc5b91e)}
+
+.reaction-test .month-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.reaction-test .month-grid button{padding:8px 4px}
