@@ -65,3 +65,31 @@ body[data-season="earlywinter"] header{background:radial-gradient(circle at 16% 
 
 /* Latest + nearest official sighting summaries */
 .sighting-summaries{display:grid;gap:10px;margin-top:10px}.sighting-summaries .nearest{margin-top:0}.nearest small{white-space:pre-line;line-height:1.7}
+
+
+/* v1.1 design trial: illustrated autumn background */
+body[data-season="autumn"]{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(246,242,232,.72),rgba(246,242,232,.82)),
+    url("./background-autumn.png") center top/cover fixed no-repeat;
+}
+body[data-season="autumn"] .app{
+  background:rgba(246,242,232,.28);
+  border-radius:0 0 28px 28px;
+}
+body[data-season="autumn"] header{
+  background:rgba(255,250,240,.52);
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+}
+body[data-season="autumn"] .status,
+body[data-season="autumn"] .grid article,
+body[data-season="autumn"] .nearest{
+  background:rgba(255,255,255,.90);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+}
+@media(max-width:600px){
+  body[data-season="autumn"]{background-attachment:scroll;background-position:center top}
+}
