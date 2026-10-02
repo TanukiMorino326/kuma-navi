@@ -47,3 +47,6 @@ body[data-season="winter"] header::before,body[data-season="winter"] header::aft
 body[data-season="latewinter"] header::before,body[data-season="latewinter"] header::after{content:"❄";position:absolute;z-index:-1;opacity:.18;font-size:18px}
 body[data-season] header::before{left:7%;top:18%}body[data-season] header::after{right:7%;bottom:18%;transform:rotate(22deg)}
 @media(prefers-reduced-motion:no-preference){body[data-season="autumn"] header::after,body[data-season="spring"] header::after,body[data-season="winter"] header::after{animation:seasonFloat 5s ease-in-out infinite alternate}@keyframes seasonFloat{to{transform:translateY(7px) rotate(30deg)}}}
+
+/* Developer environment test controls */
+.reaction-test .test-title{margin:14px 0 7px}.reaction-test .season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.reaction-test .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.reaction-test .auto-env{width:100%;margin-top:9px;background:#f2efe5}.reaction-test .season-grid button,.reaction-test .time-grid button{padding:8px 4px}
