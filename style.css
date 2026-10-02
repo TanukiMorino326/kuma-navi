@@ -10,3 +10,5 @@
 .nowrap{white-space:nowrap}.nearest strong{line-break:strict;word-break:keep-all;overflow-wrap:normal}.notice{line-break:strict;word-break:normal}
 @media(max-width:600px){header p{font-size:13.5px}.nearest strong{font-size:18px;white-space:nowrap}.notice{font-size:11.5px}}
 @media(max-width:390px){.nowrap{white-space:normal}.nearest strong{font-size:17px}}
+
+.mobile-break{display:none}@media(max-width:600px){.mobile-break{display:block}}
