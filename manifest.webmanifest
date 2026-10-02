@@ -13,5 +13,19 @@
   "categories": [
     "utilities",
     "navigation"
+  ],
+  "icons": [
+    {
+      "src": "./山岳探検ベアのアイコン.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./山岳探検ベアのアイコン.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
