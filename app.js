@@ -42,4 +42,17 @@ function runLayoutStressTest(){const now=Date.now(),lat=37.1100,lon=138.2500,dat
 ];analyze(lat,lon,data);setReaction("caution",{});$("status").classList.remove("hidden");$("status").textContent="表示テスト：長い場所名・内容・頭数あり";$("dataFreshness").textContent="表示テスト用データ（公式データではありません）";btn.disabled=true;btn.textContent="📍 表示テスト中";const box=document.createElement("section");box.className="diagnostic";box.innerHTML="<strong>長文レイアウトテスト</strong><pre>場所名・内容・頭数を多めにしたダミーデータです。\n本番の公式データは使用していません。</pre>";document.querySelector(".app").appendChild(box)}
 if(PARAMS.get("layouttest")==="1")runLayoutStressTest();
 
+function runCoverageDisplayTest(){
+ const box=document.createElement("section");box.className="diagnostic coverage-display-test";
+ box.innerHTML='<strong>県境表示テスト</strong><div class="coverage-test-buttons"><button type="button" data-mode="normal">岡沢・通常</button><button type="button" data-mode="border">妙高高原・県境</button><button type="button" data-mode="outside">黒姫・県外</button></div><pre>表示だけを切り替える開発用テストです。\n公式データの検索は行いません。</pre>';
+ document.querySelector(".app").appendChild(box);
+ const show=mode=>{btn.disabled=true;btn.textContent="📍 表示テスト中";$("status").classList.remove("hidden");$("results").classList.toggle("hidden",mode==="outside");
+  if(mode==="normal"){setGeoNotice("","");$("status").textContent="現在地・公式データを確認しました（精度 約12m）"}
+  if(mode==="border"){setGeoNotice("⚠️ 県境付近です。新潟県側の公式情報のみ確認します。隣県側の出没情報は含まれません。","border");$("status").textContent="現在地・公式データを確認しました（精度 約12m）"}
+  if(mode==="outside"){setGeoNotice("新潟県版でぃてくまの対象地域外です。新潟県の公式出没情報のみを使用しています。","outside");$("status").textContent="現在地を確認しました"}
+ };
+ box.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.mode)));show("normal")
+}
+if(PARAMS.get("coveragetest")==="1")runCoverageDisplayTest();
+
 if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js"));
