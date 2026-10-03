@@ -159,3 +159,23 @@ body[data-season][data-time="evening"] header{background:rgba(255,244,226,.46);b
 body[data-season][data-time="night"] header{background:rgba(235,241,246,.44);box-shadow:inset 0 0 80px rgba(36,59,75,.14)}
 body[data-season][data-time="night"] .privacy,
 body[data-season][data-time="night"] footer{color:#eef3f5;text-shadow:0 1px 3px rgba(0,0,0,.65)}
+
+/* v1.1 time-of-day tuning: warm day, soft sunset, deeper night */
+body[data-season][data-time="day"]{
+  background-image:
+    linear-gradient(rgba(238,181,125,.10),rgba(225,166,116,.13)),
+    var(--season-image);
+}
+body[data-season][data-time="evening"]{
+  background-image:
+    linear-gradient(rgba(244,153,116,.20),rgba(184,119,145,.24)),
+    var(--season-image);
+}
+body[data-season][data-time="night"]{
+  background-image:
+    linear-gradient(rgba(18,38,68,.58),rgba(8,25,49,.68)),
+    var(--season-image);
+}
+body[data-season][data-time="day"] header{background:rgba(255,250,240,.42);box-shadow:none}
+body[data-season][data-time="evening"] header{background:rgba(255,239,229,.44);box-shadow:inset 0 0 70px rgba(226,132,84,.10)}
+body[data-season][data-time="night"] header{background:rgba(226,235,245,.46);box-shadow:inset 0 0 80px rgba(24,47,76,.18)}
