@@ -190,3 +190,15 @@ body[data-season][data-time="evening"] header{
   background:rgba(255,235,224,.45);
   box-shadow:inset 0 0 72px rgba(232,119,74,.13);
 }
+
+/* v1.1 autumn dedicated evening/night artwork test */
+body[data-season="autumn"][data-time="evening"]{
+  background-image:
+    linear-gradient(rgba(246,242,232,.12),rgba(246,242,232,.18)),
+    url("./background-autumn-evening.png");
+}
+body[data-season="autumn"][data-time="night"]{
+  background-image:
+    linear-gradient(rgba(10,24,43,.10),rgba(7,20,38,.18)),
+    url("./background-autumn-night.png");
+}
