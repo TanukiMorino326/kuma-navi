@@ -239,3 +239,10 @@ body[data-season][data-time="night"] .freshness,
 body[data-season][data-time="night"] .notice{
   background:rgba(20,31,43,.42);
 }
+
+/* v1.1 results heading readability at night */
+body[data-season][data-time="night"] .results h2{
+  color:#f7f3e8;
+  font-weight:800;
+  text-shadow:0 2px 4px rgba(0,0,0,.92),0 0 7px rgba(0,0,0,.62);
+}
