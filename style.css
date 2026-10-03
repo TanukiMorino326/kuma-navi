@@ -119,3 +119,19 @@ body[data-season="autumn"] .nearest{background:rgba(255,255,255,.88)}
 @media(max-width:600px){
   body[data-season="autumn"]{background-attachment:scroll;background-position:center top}
 }
+
+/* v1.1 seven-season illustrated backgrounds */
+body[data-season]{min-height:100vh;background-position:center top;background-size:cover;background-attachment:fixed;background-repeat:no-repeat}
+body[data-season="spring"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-spring.png")}
+body[data-season="earlysummer"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-earlysummer.png")}
+body[data-season="summer"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-summer.png")}
+body[data-season="autumn"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-autumn-web.png")}
+body[data-season="earlywinter"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-earlywinter.png")}
+body[data-season="winter"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-winter.png")}
+body[data-season="latewinter"]{background-image:linear-gradient(rgba(246,242,232,.58),rgba(246,242,232,.68)),url("./background-latewinter.png")}
+body[data-season] .app{background:rgba(246,242,232,.18);border-radius:0 0 28px 28px}
+body[data-season] header{background:rgba(255,250,240,.42);backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px)}
+body[data-season] header::before,body[data-season] header::after{display:none}
+body[data-season] .privacy,body[data-season] footer{color:#55584f;text-shadow:0 1px 2px rgba(255,255,255,.9)}
+body[data-season] .status,body[data-season] .grid article,body[data-season] .nearest{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+@media(max-width:600px){body[data-season]{background-attachment:scroll;background-position:center top}}
