@@ -72,7 +72,7 @@ body[data-season="autumn"]{
   min-height:100vh;
   background:
     linear-gradient(rgba(246,242,232,.72),rgba(246,242,232,.82)),
-    url("./background-autumn.png") center top/cover fixed no-repeat;
+    url("./background-autumn-web.png") center top/cover fixed no-repeat;
 }
 body[data-season="autumn"] .app{
   background:rgba(246,242,232,.28);
