@@ -246,3 +246,22 @@ body[data-season][data-time="night"] .results h2{
   font-weight:800;
   text-shadow:0 2px 4px rgba(0,0,0,.92),0 0 7px rgba(0,0,0,.62);
 }
+
+/* v1.1 supporting text readability across time-of-day backgrounds */
+body[data-season] .privacy{
+  color:#4b4d47;
+  font-weight:500;
+  text-shadow:0 1px 2px rgba(255,255,255,.96),0 0 4px rgba(255,255,255,.65);
+}
+body[data-season][data-time="night"] .privacy{
+  color:#f4f5f2;
+  text-shadow:0 1px 3px rgba(0,0,0,.92),0 0 6px rgba(0,0,0,.62);
+}
+body[data-season] header p{
+  color:#555850;
+  text-shadow:0 1px 2px rgba(255,255,255,.72);
+}
+body[data-season][data-time="night"] header p{
+  color:#3f4650;
+  text-shadow:0 1px 2px rgba(255,255,255,.70);
+}
