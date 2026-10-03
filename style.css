@@ -202,3 +202,40 @@ body[data-season="autumn"][data-time="night"]{
     linear-gradient(rgba(10,24,43,.10),rgba(7,20,38,.18)),
     url("./background-autumn-night.png");
 }
+
+/* v1.1 result/footer readability over illustrated backgrounds */
+body[data-season] .freshness,
+body[data-season] .notice{
+  color:#2f302b;
+  font-weight:700;
+  text-shadow:0 1px 2px rgba(255,255,255,.95),0 0 5px rgba(255,255,255,.72);
+}
+body[data-season] .freshness{
+  display:inline-block;
+  margin:14px 4px 6px;
+  padding:5px 9px;
+  border-radius:9px;
+  background:rgba(255,255,255,.42);
+}
+body[data-season] .notice{
+  display:inline-block;
+  margin:8px 5px 6px;
+  padding:6px 10px;
+  border-radius:9px;
+  background:rgba(255,255,255,.46);
+}
+body[data-season] footer{
+  color:#343630;
+  font-weight:650;
+  text-shadow:0 1px 2px rgba(255,255,255,.98),0 0 6px rgba(255,255,255,.82);
+}
+body[data-season][data-time="night"] .freshness,
+body[data-season][data-time="night"] .notice,
+body[data-season][data-time="night"] footer{
+  color:#f5f7f8;
+  text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.58);
+}
+body[data-season][data-time="night"] .freshness,
+body[data-season][data-time="night"] .notice{
+  background:rgba(20,31,43,.42);
+}
