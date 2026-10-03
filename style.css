@@ -135,3 +135,27 @@ body[data-season] header::before,body[data-season] header::after{display:none}
 body[data-season] .privacy,body[data-season] footer{color:#55584f;text-shadow:0 1px 2px rgba(255,255,255,.9)}
 body[data-season] .status,body[data-season] .grid article,body[data-season] .nearest{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 @media(max-width:600px){body[data-season]{background-attachment:scroll;background-position:center top}}
+
+/* v1.1 time-of-day light layer: season stays unchanged; only atmosphere shifts */
+body[data-season][data-time="day"]{background-blend-mode:normal}
+body[data-season][data-time="evening"]{
+  background-image:
+    linear-gradient(rgba(214,126,67,.18),rgba(91,68,91,.22)),
+    var(--season-image);
+}
+body[data-season][data-time="night"]{
+  background-image:
+    linear-gradient(rgba(20,39,62,.48),rgba(10,27,47,.58)),
+    var(--season-image);
+}
+body[data-season="spring"]{--season-image:url("./background-spring.png")}
+body[data-season="earlysummer"]{--season-image:url("./background-earlysummer.png")}
+body[data-season="summer"]{--season-image:url("./background-summer.png")}
+body[data-season="autumn"]{--season-image:url("./background-autumn-web.png")}
+body[data-season="earlywinter"]{--season-image:url("./background-earlywinter.png")}
+body[data-season="winter"]{--season-image:url("./background-winter.png")}
+body[data-season="latewinter"]{--season-image:url("./background-latewinter.png")}
+body[data-season][data-time="evening"] header{background:rgba(255,244,226,.46);box-shadow:inset 0 0 70px rgba(217,139,56,.10)}
+body[data-season][data-time="night"] header{background:rgba(235,241,246,.44);box-shadow:inset 0 0 80px rgba(36,59,75,.14)}
+body[data-season][data-time="night"] .privacy,
+body[data-season][data-time="night"] footer{color:#eef3f5;text-shadow:0 1px 3px rgba(0,0,0,.65)}
